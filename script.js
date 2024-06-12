@@ -3,25 +3,34 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     
     let isValid = true;
 
-    const name = document.getElementById('name');
+    const firstName = document.getElementById('firstName');
+    const surname = document.getElementById('surname');
     const email = document.getElementById('email');
     const password = document.getElementById('password');
     const interests = document.getElementById('interests');
 
-    const nameError = document.getElementById('nameError');
+    const firstNameError = document.getElementById('firstNameError');
+    const surnameError = document.getElementById('surnameError');
     const emailError = document.getElementById('emailError');
     const passwordError = document.getElementById('passwordError');
     const interestsError = document.getElementById('interestsError');
 
     // Clear previous error messages
-    nameError.textContent = '';
+    firstNameError.textContent = '';
+    surnameError.textContent = '';
     emailError.textContent = '';
     passwordError.textContent = '';
     interestsError.textContent = '';
 
-    // Name validation
-    if (name.value.trim() === '') {
-        nameError.textContent = 'Name is required';
+    // First name validation
+    if (firstName.value.trim() === '') {
+        firstNameError.textContent = 'First name is required';
+        isValid = false;
+    }
+
+    // Surname validation
+    if (surname.value.trim() === '') {
+        surnameError.textContent = 'Surname is required';
         isValid = false;
     }
 
@@ -39,8 +48,8 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     if (password.value.trim() === '') {
         passwordError.textContent = 'Password is required';
         isValid = false;
-    } else if (password.value.length < 6) {
-        passwordError.textContent = 'Password must be at least 6 characters long';
+    } else if (password.value.length < 8) {
+        passwordError.textContent = 'Password must be at least 8 characters long';
         isValid = false;
     }
 
