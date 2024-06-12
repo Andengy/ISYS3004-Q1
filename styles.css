@@ -1,3 +1,10 @@
+/*Css for form*/
+
+/* Setting header*/
+header {
+  text-align: center;
+}
+
 * {box-sizing: border-box}
 
 /* Add padding to containers */
@@ -5,7 +12,7 @@
   padding: 16px;
 }
 
-/* Full-width input fields */
+/* Add position to input fields */
 input[type=text], input[type=password], input[type=email], textarea {
   width: 100%;
   padding: 15px;
@@ -20,7 +27,7 @@ input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, tex
   outline: none;
 }
 
-/* Overwrite default styles of hr */
+/* hr style */
 hr {
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
