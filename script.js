@@ -52,5 +52,6 @@ document.getElementById('registrationForm').addEventListener('submit', function(
 
     if (isValid) {
         alert('Registration successful');
+        // Here you could also submit the form or send the data to a server
     }
 });
